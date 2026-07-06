@@ -443,3 +443,12 @@ html.drawer-open{overflow:hidden}
 .drawer nav .sub-menu{display:block;position:static;border:none;box-shadow:none;background:transparent;padding:0 0 4px;min-width:0}
 .drawer nav .sub-menu a{padding:9px 4px 9px 24px;font-size:15px;border-bottom:none;color:#4c5a2e;font-weight:500}
 .drawer nav .sub-menu a:hover{color:var(--red)}
+
+/* ---------- HARMONIE — painted with the brand's piano-key colors ---------- */
+.harmonie{
+  background:linear-gradient(90deg,
+    #e03a2a 0 12.5%, #f0871f 12.5% 25%, #f2c81e 25% 37.5%, #98c93f 37.5% 50%,
+    #2b9e4a 50% 62.5%, #2f7fd0 62.5% 75%, #7b4fb5 75% 87.5%, #d5479b 87.5% 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-weight:700;
+}
