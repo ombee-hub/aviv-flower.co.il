@@ -106,7 +106,7 @@
   head.className = 'drawer-head';
   var headerLogo = navwrap.querySelector('.logo img');
   head.innerHTML =
-    '<img src="' + (headerLogo ? headerLogo.getAttribute('src') : 'logo.png') + '" alt="Aviv — Harmonie flowers">' +
+    '<img src="' + (headerLogo ? headerLogo.getAttribute('src') : 'images/aviv-logo.png') + '" alt="Aviv — Harmonie flowers">' +
     '<button class="drawer-close" type="button" aria-label="Close menu">&#10005;</button>';
   drawer.appendChild(head);
 
