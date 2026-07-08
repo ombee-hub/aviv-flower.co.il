@@ -68,7 +68,7 @@
     '.a11y-tile[aria-pressed="true"]{background:#5f8a1e;border-color:#5f8a1e;color:#fff}',
     '.a11y-tile[aria-pressed="true"] svg{stroke:#fff}',
     '.a11y-step{position:absolute;top:6px;right:8px;font-size:10.5px;font-weight:700}',
-    '#a11y-reset{grid-column:1/-1;background:#1faa4b;color:#fff;border:none;border-radius:24px;padding:12px;margin-top:6px;',
+    '#a11y-reset{grid-column:1/-1;background:#1faa4b;color:#fff;border:none;border-radius:10px;padding:12px;margin-top:6px;',
     'font-family:inherit;font-size:14px;font-weight:700;cursor:pointer}',
     '#a11y-reset:hover,#a11y-reset:focus-visible{background:#ec2028}',
     '#a11y-note{font-size:11px;color:#6a7748;text-align:center;margin-top:10px}',
