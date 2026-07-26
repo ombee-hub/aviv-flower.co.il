@@ -123,7 +123,7 @@
       '<span>' + (T.labels[f.id] || f.label) + '</span></button>';
   });
   grid += '<button id="a11y-reset" type="button">&#8635; ' + T.reset + '</button></div>' +
-    '<p id="a11y-note"><a href="privacy.html">' + T.note + '</a></p>';
+    '<p id="a11y-note"><a href="accessibility-statement.html">' + T.note + '</a></p>';
   panel.innerHTML = grid;
 
   var guideBar = document.createElement('div');

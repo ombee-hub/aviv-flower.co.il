@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ombee-hub.github.io/aviv-flower.co.il/sitemap.xml

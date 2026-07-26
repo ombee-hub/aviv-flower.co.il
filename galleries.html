@@ -5,7 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Galleries — Aviv Flower</title>
 <meta name="description" content="Photo galleries from Aviv Flower: fields, packing house, varieties and seasons.">
-<link rel="icon" type="image/png" href="images/aviv-logo.png">
+<link rel="canonical" href="https://ombee-hub.github.io/aviv-flower.co.il/galleries.html">
+<link rel="alternate" hreflang="en" href="https://ombee-hub.github.io/aviv-flower.co.il/galleries.html">
+<link rel="alternate" hreflang="zh-CN" href="https://ombee-hub.github.io/aviv-flower.co.il/zh/galleries.html">
+<link rel="alternate" hreflang="x-default" href="https://ombee-hub.github.io/aviv-flower.co.il/galleries.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aviv Flower">
+<meta property="og:title" content="Galleries — Aviv Flower">
+<meta property="og:description" content="Photo galleries from Aviv Flower: fields, packing house, varieties and seasons.">
+<meta property="og:url" content="https://ombee-hub.github.io/aviv-flower.co.il/galleries.html">
+<meta property="og:image" content="https://ombee-hub.github.io/aviv-flower.co.il/images/2020/02/03/eust.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
@@ -262,8 +274,24 @@
       <a href="gallery/61/plane_loading_maman3.jpg" target="_blank" rel="noopener"><img src="gallery/61/plane_loading_maman3.jpg" alt="Aviv gallery photo" loading="lazy"></a>
       <a href="gallery/61/plane_loading_maman36.jpg" target="_blank" rel="noopener"><img src="gallery/61/plane_loading_maman36.jpg" alt="Aviv gallery photo" loading="lazy"></a>
     </div>
+    <div style="text-align:center;margin-top:36px"><button id="gal-more" class="btn" type="button">Load more photos</button></div>
   </div>
 </section>
+
+<script>
+(function(){
+  var items=document.querySelectorAll(".gal a");
+  var btn=document.getElementById("gal-more");
+  var shown=24, step=48;
+  function update(){
+    items.forEach(function(el,i){el.style.display=i<shown?"":"none";});
+    btn.style.display=shown>=items.length?"none":"";
+    btn.textContent="Load more photos ("+Math.max(0,items.length-shown)+" left)";
+  }
+  btn.addEventListener("click",function(){shown+=step;update();});
+  update();
+})();
+</script>
 
 <footer class="site">
   <div class="wrap">
@@ -295,9 +323,9 @@
   </div>
 </footer>
 
-<script src="accessibility.js?v=3" defer></script>
+<script src="accessibility.js?v=4" defer></script>
 <script src="lang.js?v=2" defer></script>
-<script src="nav.js?v=2" defer></script>
+<script src="nav.js?v=3" defer></script>
 <script src="brand.js?v=1" defer></script>
 <script src="cookies.js?v=2" defer></script>
 </body>
