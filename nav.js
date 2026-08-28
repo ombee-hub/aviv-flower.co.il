@@ -183,22 +183,3 @@
   if (desktop.addEventListener) desktop.addEventListener('change', onDesktop);
   else if (desktop.addListener) desktop.addListener(onDesktop); /* older browsers */
 })();
-
-/* ============================================================
-   Back-to-top button — appears after scrolling down.
-   ============================================================ */
-(function () {
-  'use strict';
-  var b = document.createElement('button');
-  b.className = 'to-top';
-  b.type = 'button';
-  b.setAttribute('aria-label', (document.documentElement.lang || '').indexOf('zh') === 0 ? '返回顶部' : 'Back to top');
-  b.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
-  document.body.appendChild(b);
-  b.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  window.addEventListener('scroll', function () {
-    b.classList.toggle('show', window.scrollY > 600);
-  }, { passive: true });
-})();

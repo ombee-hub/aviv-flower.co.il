@@ -466,18 +466,3 @@ html.drawer-open{overflow:hidden}
   border:3px solid #fff;outline:2px solid var(--brand);background:#fff;
 }
 .grower span{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35;text-wrap:balance}
-
-/* ---------- back-to-top ---------- */
-.to-top{
-  position:fixed;bottom:22px;inset-inline-end:22px;z-index:99996;
-  width:46px;height:46px;border-radius:10px;cursor:pointer;
-  background:var(--ink);color:#fff;border:2px solid #fff;
-  box-shadow:0 6px 20px rgba(0,0,0,.25);
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transform:translateY(8px);
-  transition:opacity .25s,transform .25s,background .2s;
-}
-.to-top.show{opacity:1;pointer-events:auto;transform:none}
-.to-top:hover,.to-top:focus-visible{background:var(--red)}
-.to-top:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-@media(prefers-reduced-motion:reduce){.to-top{transition:none}}
