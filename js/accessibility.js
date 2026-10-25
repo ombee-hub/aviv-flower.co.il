@@ -12,7 +12,7 @@
   var IS_ZH = (document.documentElement.lang || 'en').toLowerCase().indexOf('zh') === 0;
   var T = IS_ZH ? {
     title: '辅助功能', open: '打开辅助功能菜单', close: '关闭辅助功能菜单',
-    reset: '重置所有设置', note: '无障碍与隐私声明',
+    reset: '重置所有设置', note: '无障碍声明', privacy: '隐私政策',
     labels: {
       contrast: '对比度 +', links: '突出链接', bigtext: '放大文字', spacing: '文字间距',
       noanim: '暂停动画', noimg: '隐藏图片', dyslexia: '易读字体', cursor: '大光标',
@@ -20,7 +20,7 @@
     }
   } : {
     title: 'Accessibility', open: 'Open accessibility menu', close: 'Close accessibility menu',
-    reset: 'Reset All Settings', note: 'Accessibility & privacy statement',
+    reset: 'Reset All Settings', note: 'Accessibility statement', privacy: 'Privacy policy',
     labels: {}
   };
 
@@ -123,7 +123,7 @@
       '<span>' + (T.labels[f.id] || f.label) + '</span></button>';
   });
   grid += '<button id="a11y-reset" type="button">&#8635; ' + T.reset + '</button></div>' +
-    '<p id="a11y-note"><a href="accessibility-statement.html">' + T.note + '</a></p>';
+    '<p id="a11y-note"><a href="accessibility-statement.html">' + T.note + '</a> · <a href="privacy.html">' + T.privacy + '</a></p>';
   panel.innerHTML = grid;
 
   var guideBar = document.createElement('div');

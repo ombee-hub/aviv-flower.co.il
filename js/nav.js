@@ -19,14 +19,12 @@
     { href: 'flowers.html', items: [['flowers.html', '鲜花目录'], ['flowers-selection.html', '品种一览']] },
     { href: 'produce.html', items: [['produce.html', '全部农产品'], ['herbs.html', '新鲜香草'], ['edible-flowers.html', '食用花卉'], ['exotic-fruits.html', '稀有水果'], ['vegetables.html', '特色蔬菜']] },
     { href: 'about.html', items: [['about.html', '关于我们'], ['growers.html', '精英种植户'], ['operations.html', '运营流程'], ['vision.html', '愿景与目标'], ['germany.html', 'Aviv 德国公司']] },
-    { href: 'news.html', items: [['news.html', '全部新闻'], ['news-events.html', '展会活动'], ['news-press.html', '媒体报道'], ['news-newsletters.html', '订阅通讯'], ['news-vase.html', '花瓶之外']] },
-    { href: 'contact.html', items: [['contact.html#flowers-desk', '鲜花团队'], ['contact.html#produce-desk', '农产品团队']] }
+    { href: 'news.html', items: [['news.html', '全部新闻'], ['news-events.html', '展会活动'], ['news-press.html', '媒体报道'], ['news-newsletters.html', '订阅通讯'], ['news-vase.html', '花瓶之外']] }
   ] : [
     { href: 'flowers.html', items: [['flowers.html', 'Flower catalogue'], ['flowers-selection.html', 'Flower selection']] },
     { href: 'produce.html', items: [['produce.html', 'All fresh produce'], ['herbs.html', 'Herbs'], ['edible-flowers.html', 'Edible flowers'], ['exotic-fruits.html', 'Exotic fruits'], ['vegetables.html', 'Vegetables']] },
     { href: 'about.html', items: [['about.html', 'About us'], ['growers.html', 'Our growers'], ['operations.html', 'Our operations'], ['vision.html', 'Vision & goals'], ['germany.html', 'Aviv Germany']] },
-    { href: 'news.html', items: [['news.html', 'All news'], ['news-events.html', 'Events'], ['news-press.html', 'From the press'], ['news-newsletters.html', 'Newsletters'], ['news-vase.html', 'Out of the Vase']] },
-    { href: 'contact.html', items: [['contact.html#flowers-desk', 'Flowers desk'], ['contact.html#produce-desk', 'Produce desk']] }
+    { href: 'news.html', items: [['news.html', 'All news'], ['news-events.html', 'Events'], ['news-press.html', 'From the press'], ['news-newsletters.html', 'Newsletters'], ['news-vase.html', 'Out of the Vase']] }
   ];
 
   function closeAllSubs() {
