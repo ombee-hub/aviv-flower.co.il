@@ -7,7 +7,7 @@
    ============================================================ */
 @font-face{
   font-family:"Assistant";
-  src:url("fonts/Assistant-Variable.ttf") format("truetype-variations");
+  src:url("../fonts/Assistant-Variable.ttf") format("truetype-variations");
   font-weight:200 800;
   font-style:normal;
   font-display:swap;
@@ -321,6 +321,8 @@ footer.site a:hover{color:#fff}
   box-shadow:0 14px 30px -18px rgba(38,51,15,.4);
 }
 .lang.open .lang-menu{display:block}
+.lang-caret{flex:none;margin-inline-start:-2px;transition:transform .2s}
+.lang.open .lang-caret{transform:rotate(180deg)}
 .lang-menu a{display:block;padding:11px 16px;font-size:14px;color:var(--ink)}
 .lang-menu a:hover{background:var(--paper);color:var(--red)}
 .lang-menu a[aria-current="true"]{color:var(--leaf-deep);font-weight:700}
@@ -370,6 +372,8 @@ html.drawer-open{overflow:hidden}
 
 .drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .drawer-head img{height:46px;width:auto}
+.drawer-logo{display:inline-flex;border-radius:6px}
+.drawer-logo:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .drawer-close{
   background:none;border:none;cursor:pointer;font-size:19px;color:var(--ink);
   padding:6px 12px;border-radius:4px;

@@ -105,8 +105,12 @@
   var head = document.createElement('div');
   head.className = 'drawer-head';
   var headerLogo = navwrap.querySelector('.logo img');
+  var headerHome = navwrap.querySelector('a.logo');
+  /* logo links back to the home page, like the header logo */
   head.innerHTML =
-    '<img src="' + (headerLogo ? headerLogo.getAttribute('src') : 'images/aviv-logo.webp') + '" alt="Aviv — Harmonie flowers">' +
+    '<a class="drawer-logo" href="' + (headerHome ? headerHome.getAttribute('href') : 'index.html') + '"' +
+    ' aria-label="' + (headerHome ? headerHome.getAttribute('aria-label') : 'Aviv Flower — home') + '">' +
+    '<img src="' + (headerLogo ? headerLogo.getAttribute('src') : 'images/aviv-logo.webp') + '" alt="Aviv — Harmonie flowers"></a>' +
     '<button class="drawer-close" type="button" aria-label="Close menu">&#10005;</button>';
   drawer.appendChild(head);
 
