@@ -502,3 +502,6 @@ html.drawer-open{overflow:hidden}
 .offices-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.offices-grid{grid-template-columns:1fr}}
 .desk-note{margin:-40px 0 0;font-size:14.5px;color:#6a7748}
+.lang-flag{width:20px;height:13px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(38,51,15,.15);flex:none;vertical-align:-2px}
+.lang-menu a{display:flex;align-items:center;gap:10px}
+.drawer-lang a{display:inline-flex;align-items:center;gap:8px}

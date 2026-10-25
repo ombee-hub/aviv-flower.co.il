@@ -19,13 +19,32 @@
   var pageLang = (document.documentElement.lang || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
   var LABELS = { en: 'EN', zh: '中文' };
 
+  /* flag images live next to the logo, so reuse its folder (images/ or ../images/) */
+  var logo = document.querySelector('header.site .logo img');
+  var imgDir = logo ? logo.getAttribute('src').replace(/[^/]*$/, '') : 'images/';
+  var FLAGS = { en: 'flag-uk.webp', zh: 'zh_cn.webp' };
+  function flag(code) {
+    var img = document.createElement('img');
+    img.className = 'lang-flag';
+    img.src = imgDir + FLAGS[code];
+    img.alt = '';
+    img.width = 20;
+    img.height = 13;
+    return img;
+  }
+
   /* tag items by language: an item with lang="zh-CN" is Chinese, otherwise English */
   items.forEach(function (a) {
     var code = (a.getAttribute('lang') || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
     a.setAttribute('data-lang', code);
     if (code === pageLang) a.setAttribute('aria-current', 'true');
     else a.removeAttribute('aria-current');
+    a.insertBefore(flag(code), a.firstChild);
   });
+
+  /* button shows the current language's flag instead of the globe */
+  var globe = btn.querySelector('svg');
+  if (globe) btn.replaceChild(flag(pageLang), globe);
 
   /* button label = the language of the page being read */
   for (var i = 0; i < btn.childNodes.length; i++) {

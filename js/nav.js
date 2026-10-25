@@ -117,14 +117,11 @@
   nav.innerHTML = links.innerHTML;
   drawer.appendChild(nav);
 
-  /* language choice, same options as the header globe */
+  /* language choice, same options (and flags) as the header switcher */
   var headerLang = navwrap.querySelector('.lang-menu');
   if (headerLang) {
     var langWrap = document.createElement('div');
     langWrap.className = 'drawer-lang';
-    langWrap.innerHTML =
-      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
-      '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2c3 3.4 3 16.6 0 20-3-3.4-3-16.6 0-20Z"/></svg>';
     var pageLang = (document.documentElement.lang || 'en').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
     Array.prototype.forEach.call(headerLang.querySelectorAll('a'), function (src) {
       var a = src.cloneNode(true);
