@@ -47,21 +47,22 @@
   /* ---------- styles ---------- */
   var css = [
     '#privacy-banner{position:fixed;bottom:0;left:0;right:0;z-index:99990;',
-    'background:#26330f;color:#fbfcf4;border-top:3px solid #98c93f;',
+    'background:#26330f;color:#fbfcf4;border-top:3px solid #86b23e;',
     'font-family:"Assistant","Segoe UI",Arial,sans-serif;',
     'padding:16px 22px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;',
     'box-shadow:0 -12px 40px rgba(0,0,0,.25)}',
     '#privacy-banner .pv-msg{display:flex;align-items:center;gap:14px;max-width:70ch}',
     '#privacy-banner .pv-icon{flex:none}',
     '#privacy-banner .pv-text{font-size:14.5px;line-height:1.5}',
-    '#privacy-banner .pv-text a{color:#98c93f;font-weight:600;text-decoration:underline}',
+    '#privacy-banner .pv-text a{color:#86b23e;font-weight:600;text-decoration:underline}',
     '#privacy-banner .pv-text a:hover{color:#fff}',
     '#privacy-banner .pv-btns{display:flex;gap:10px}',
     '#privacy-banner .pv-btns button{font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;',
     'padding:10px 26px;border-radius:10px;transition:background .2s,border-color .2s,color .2s}',
-    '#pv-accept{background:#98c93f;border:1.5px solid #98c93f;color:#26330f}',
-    '#pv-decline{background:transparent;border:1.5px solid rgba(251,252,244,.55);color:#fbfcf4}',
-    '#privacy-banner .pv-btns button:hover,#privacy-banner .pv-btns button:focus-visible{background:#fff;border-color:#fff;color:#26330f}',
+    '#pv-accept{background:#4f7a19;border:1.5px solid #4f7a19;color:#fff}',
+    '#pv-decline{background:#a31a22;border:1.5px solid #a31a22;color:#fff}',
+    '#pv-accept:hover,#pv-accept:focus-visible{background:#3d5f13;border-color:#3d5f13}',
+    '#pv-decline:hover,#pv-decline:focus-visible{background:#7a1219;border-color:#7a1219}',
     '#privacy-banner .pv-btns button:focus-visible{outline:2px solid #fff;outline-offset:2px}',
     '@media(max-width:640px){#privacy-banner{padding:14px 16px;gap:12px}#privacy-banner .pv-btns{width:100%}#privacy-banner .pv-btns button{flex:1}}'
   ].join('\n');

@@ -1,7 +1,7 @@
 /* ============================================================
    Aviv Flower — shared design system
    Palette derived from the Aviv logo:
-     lime  #98C93F (logo green)  ·  red #EC2028 (logo arc)
+     lime  #86B23E (logo green)  ·  red #A31A22 (logo arc)
    Typeface: Assistant (variable, Hebrew + Latin, OFL) — served
    locally from assets/fonts so the site has no CDN dependency.
    ============================================================ */
@@ -13,8 +13,12 @@
   font-display:swap;
 }
 :root{
-  --brand:#98c93f;      /* logo lime green */
-  --red:#ec2028;        /* logo red */
+  --brand:#86b23e;      /* logo lime green */
+  --red:#a31a22;        /* logo red */
+  --hover:#4f7a19;      /* green for hover, focus and the current menu item */
+  --btn-green:#4f7a19;  /* primary button (logo green, dark enough for white text) */
+  --btn-green-dark:#3d5f13;
+  --btn-red-dark:#7a1219; /* secondary button hover */
   --ink:#26330f;        /* deep olive derived from the logo green */
   --paper:#fbfcf4;      /* lime-biased warm white */
   --leaf-deep:#5f8a1e;  /* darker lime for small accents & kickers */
@@ -52,22 +56,21 @@ header.site{
 .logo span{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--leaf-deep)}
 .nav-links{display:flex;gap:28px;font-size:14.5px;font-weight:500}
 .nav-links a{position:relative;padding:4px 0;color:var(--ink)}
-.nav-links a:hover,.nav-links a:focus-visible{color:var(--red)}
-.nav-links a:focus-visible{outline:2px solid var(--red);outline-offset:4px}
-.nav-links a[aria-current="page"]{color:var(--red);border-bottom:2px solid var(--red)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--hover)}
+.nav-links a:focus-visible{outline:2px solid var(--hover);outline-offset:4px}
+.nav-links a[aria-current="page"]{color:var(--hover);border-bottom:2px solid var(--hover)}
 .btn{
-  display:inline-block;background:var(--ink);color:var(--paper);
+  display:inline-block;background:var(--btn-green);color:#fff;
   font-size:14px;font-weight:600;letter-spacing:.02em;
-  padding:11px 22px;border-radius:10px;border:1px solid var(--ink);
+  padding:11px 22px;border-radius:10px;border:1px solid var(--btn-green);
   transition:background .2s,color .2s,border-color .2s;cursor:pointer;
   font-family:var(--sans);
 }
-.btn:hover,.btn:focus-visible{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover,.btn:focus-visible{background:var(--btn-green-dark);border-color:var(--btn-green-dark);color:#fff}
 .btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.btn.light{background:var(--paper);color:var(--ink);border-color:var(--hairline)}
-.btn.light:hover{background:var(--red);border-color:var(--red);color:#fff}
-.btn.ghost{background:transparent;color:var(--paper);border-color:var(--sage)}
-.btn.ghost:hover{border-color:var(--brand);background:var(--brand);color:var(--ink)}
+.btn.light{background:var(--red);color:#fff;border-color:var(--red)}
+.btn.light:hover,.btn.light:focus-visible{background:var(--btn-red-dark);border-color:var(--btn-red-dark);color:#fff}
+.btn.ghost:focus-visible{outline-color:var(--paper)}
 @media(max-width:900px){.nav-links{display:none}}
 
 /* ---------- kicker / headings ---------- */
@@ -131,7 +134,7 @@ section{padding:96px 0}
 }
 .sec-head .kicker{margin-bottom:14px}
 .sec-head a{display:inline-block;font-size:14px;font-weight:600;color:var(--ink);background:var(--paper);border:1px solid var(--hairline);border-radius:10px;padding:10px 20px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
-.sec-head a:hover,.sec-head a:focus-visible{background:var(--red);border-color:var(--red);color:#fff}
+.sec-head a:hover,.sec-head a:focus-visible{background:var(--hover);border-color:var(--hover);color:#fff}
 @media(max-width:640px){.sec-head{flex-direction:column;align-items:flex-start}}
 .prose{max-width:68ch}
 .prose p{margin:0 0 20px;color:#3d4924}
@@ -200,7 +203,7 @@ section{padding:96px 0}
 .route p{margin:2px 0 0;font-size:13.5px;color:#6a7748}
 
 /* ---------- red CTA band ---------- */
-.shop{background:linear-gradient(120deg,var(--red),#b3161d);color:#fff;text-align:center}
+.shop{background:linear-gradient(120deg,var(--red),#7a1219);color:#fff;text-align:center}
 .shop h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4vw,50px);margin:0 0 16px;text-wrap:balance}
 .shop p{max-width:56ch;margin:0 auto 34px;color:#ffd9d7;font-size:17.5px}
 .shop .btn{background:#fff;color:var(--red);border-color:#fff}
@@ -223,7 +226,7 @@ section{padding:96px 0}
   background:var(--paper);color:var(--ink);cursor:pointer;
   transition:background .2s,color .2s,border-color .2s;
 }
-.card:hover .more{background:var(--red);border-color:var(--red);color:#fff}
+.card:hover .more{background:var(--hover);border-color:var(--hover);color:#fff}
 
 /* ---------- timeline ---------- */
 .timeline{list-style:none;margin:0;padding:0;border-inline-start:2px solid var(--brand)}
@@ -257,7 +260,7 @@ textarea{min-height:150px;resize:vertical}
 .desk h3{font-family:var(--serif);font-size:26px;font-weight:700;margin:0 0 14px}
 .desk p{margin:0 0 6px;font-size:15.5px;color:#3d4924}
 .desk a{color:var(--leaf-deep);font-weight:600}
-.desk a:hover{color:var(--red)}
+.desk a:hover{color:var(--hover)}
 .desk .person{margin-top:18px;font-size:14.5px;line-height:1.55}
 .desk .person strong{color:var(--ink)}
 .tile-list p + p{margin-top:10px}
@@ -315,7 +318,7 @@ footer.site a:hover{color:#fff}
 .webshop-btn{display:flex;align-items:center}
 .webshop-btn img{height:34px;width:auto;display:block;transition:opacity .2s,transform .2s}
 .webshop-btn:hover img,.webshop-btn:focus-visible img{opacity:.75;transform:scale(1.04)}
-.webshop-btn:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.webshop-btn:focus-visible{outline:2px solid var(--hover);outline-offset:4px}
 
 /* ---------- language switcher (globe) ---------- */
 .lang{position:relative;margin-inline-start:auto}
@@ -325,8 +328,8 @@ footer.site a:hover{color:#fff}
   padding:8px 12px;color:var(--ink);font-family:var(--sans);font-size:13px;font-weight:600;
   transition:border-color .2s,color .2s;
 }
-.lang-btn:hover,.lang-btn:focus-visible{border-color:var(--red);color:var(--red)}
-.lang-btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.lang-btn:hover,.lang-btn:focus-visible{border-color:var(--hover);color:var(--hover)}
+.lang-btn:focus-visible{outline:2px solid var(--hover);outline-offset:3px}
 .lang-menu{
   position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:60;
   background:#fff;border:1px solid var(--hairline);min-width:160px;display:none;border-radius:10px;overflow:hidden;
@@ -336,7 +339,7 @@ footer.site a:hover{color:#fff}
 .lang-caret{flex:none;margin-inline-start:-2px;transition:transform .2s}
 .lang.open .lang-caret{transform:rotate(180deg)}
 .lang-menu a{display:block;padding:11px 16px;font-size:14px;color:var(--ink)}
-.lang-menu a:hover{background:var(--paper);color:var(--red)}
+.lang-menu a:hover{background:var(--paper);color:var(--hover)}
 .lang-menu a[aria-current="true"]{color:var(--leaf-deep);font-weight:700}
 
 /* ---------- Our Lines of Products (from the live homepage) ---------- */
@@ -362,8 +365,8 @@ footer.site a:hover{color:#fff}
   background:none;border:none;
   border-radius:10px;padding:9px 6px;color:var(--ink);transition:color .2s;
 }
-.menu-btn:hover,.menu-btn:focus-visible{border-color:var(--red);color:var(--red)}
-.menu-btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.menu-btn:hover,.menu-btn:focus-visible{border-color:var(--hover);color:var(--hover)}
+.menu-btn:focus-visible{outline:2px solid var(--hover);outline-offset:3px}
 @media(max-width:900px){.menu-btn{display:flex}}
 
 .drawer-overlay{
@@ -385,20 +388,20 @@ html.drawer-open{overflow:hidden}
 .drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .drawer-head img{height:46px;width:auto}
 .drawer-logo{display:inline-flex;border-radius:6px}
-.drawer-logo:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.drawer-logo:focus-visible{outline:2px solid var(--hover);outline-offset:3px}
 .drawer-close{
   background:none;border:none;cursor:pointer;font-size:19px;color:var(--ink);
   padding:6px 12px;border-radius:4px;
 }
-.drawer-close:hover,.drawer-close:focus-visible{background:var(--red);color:#fff}
+.drawer-close:hover,.drawer-close:focus-visible{background:var(--hover);color:#fff}
 
 .drawer nav{display:flex;flex-direction:column}
 .drawer nav a{
   padding:15px 4px;border-bottom:1px solid var(--hairline);
   font-size:16.5px;font-weight:600;color:var(--ink);
 }
-.drawer nav a:hover,.drawer nav a:focus-visible{color:var(--red)}
-.drawer nav a[aria-current="page"]{color:var(--red)}
+.drawer nav a:hover,.drawer nav a:focus-visible{color:var(--hover)}
+.drawer nav a[aria-current="page"]{color:var(--hover)}
 .drawer-shop{margin-top:auto;padding-top:22px}
 .drawer-shop .webshop-btn{display:inline-flex}
 
@@ -416,7 +419,7 @@ html.drawer-open{overflow:hidden}
   font-size:14.5px;font-weight:600;color:var(--ink);
   padding:6px 12px;border:1px solid var(--hairline);border-radius:10px;
 }
-.drawer-lang a:hover,.drawer-lang a:focus-visible{border-color:var(--red);color:var(--red)}
+.drawer-lang a:hover,.drawer-lang a:focus-visible{border-color:var(--hover);color:var(--hover)}
 .drawer-lang a[aria-current="true"]{background:var(--leaf-deep);border-color:var(--leaf-deep);color:#fff}
 .drawer .drawer-shop{margin-top:0;padding-top:16px}
 
@@ -437,8 +440,8 @@ html.drawer-open{overflow:hidden}
   background:none;border:none;cursor:pointer;padding:3px;color:var(--ink);
   display:flex;align-items:center;border-radius:6px;
 }
-.sub-toggle:hover,.sub-toggle:focus-visible{color:var(--red)}
-.sub-toggle:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.sub-toggle:hover,.sub-toggle:focus-visible{color:var(--hover)}
+.sub-toggle:focus-visible{outline:2px solid var(--hover);outline-offset:2px}
 .sub-toggle svg{transition:transform .2s;display:block}
 .nav-item.open>.sub-toggle svg{transform:rotate(180deg)}
 .sub-menu{
@@ -450,7 +453,7 @@ html.drawer-open{overflow:hidden}
 .nav-item.open>.sub-menu{display:block}
 .sub-menu::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
 .sub-menu a{display:block;padding:10px 18px;font-size:14px;color:var(--ink)}
-.sub-menu a:hover,.sub-menu a:focus-visible{background:var(--paper);color:var(--red)}
+.sub-menu a:hover,.sub-menu a:focus-visible{background:var(--paper);color:var(--hover)}
 .nav-links .sub-menu a[aria-current="page"]{border-bottom:none}
 
 /* drawer: sub-menus shown inline, indented; toggles hidden */
@@ -458,7 +461,7 @@ html.drawer-open{overflow:hidden}
 .drawer nav .sub-toggle{display:none}
 .drawer nav .sub-menu{display:block;position:static;border:none;box-shadow:none;background:transparent;padding:0 0 4px;min-width:0}
 .drawer nav .sub-menu a{padding:9px 4px 9px 24px;font-size:15px;border-bottom:none;color:#4c5a2e;font-weight:500}
-.drawer nav .sub-menu a:hover{color:var(--red)}
+.drawer nav .sub-menu a:hover{color:var(--hover)}
 
 /* ---------- HARMONIE — painted with the brand's piano-key colors ---------- */
 .harmonie{
@@ -495,7 +498,7 @@ html.drawer-open{overflow:hidden}
 .offices .tile-list p{color:#4c5a2e}
 .offices .tile-list .tag{color:var(--red)}
 .offices .tile-list p a{color:var(--ink)}
-.offices .tile-list a:hover,.offices .tile-list a:focus-visible{color:var(--red)}
+.offices .tile-list a:hover,.offices .tile-list a:focus-visible{color:var(--hover)}
 .person .role{display:block;color:#6a7748;font-size:13.5px;margin-bottom:2px}
 .offices .person{margin-top:14px;font-size:14px;line-height:1.55}
 .offices .person strong{color:var(--ink);font-weight:600}
