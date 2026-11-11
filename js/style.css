@@ -304,7 +304,7 @@ footer.site a:hover{color:#fff}
 
 .map-fig{margin:0 0 40px;background:#fff;border:1px solid var(--hairline);padding:14px}
 .map-fig img{width:100%;display:block}
-.map-fig figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#8a9b62;padding-top:10px}
+.map-fig figcaption{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.02em;color:#6a7748;padding-top:10px}
 
 .tile-list .circ{width:78px;height:78px;border-radius:50%;object-fit:cover;display:block;margin-bottom:14px;border:2px solid var(--brand)}
 
