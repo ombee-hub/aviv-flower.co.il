@@ -287,7 +287,7 @@ footer.site a:hover{color:#fff}
 
 .hero-art .photo{margin:0;background:#fff;border:1px solid var(--hairline);padding:12px 12px 10px;max-width:460px;box-shadow:0 18px 40px -28px rgba(38,51,15,.45)}
 .hero-art .photo img{display:block;width:100%}
-.hero-art .photo figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:#8a9b62;padding-top:10px;display:flex;justify-content:space-between}
+.hero-art .photo figcaption{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.02em;color:#6a7748;padding-top:10px;display:flex;justify-content:space-between}
 
 .page-hero.with-img .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .page-hero .ph-img{margin:0;background:#fff;border:1px solid var(--hairline);padding:10px}
