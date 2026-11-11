@@ -508,3 +508,29 @@ html.drawer-open{overflow:hidden}
 .lang-flag{width:20px;height:13px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(38,51,15,.15);flex:none;vertical-align:-2px}
 .lang-menu a{display:flex;align-items:center;gap:10px}
 .drawer-lang a{display:inline-flex;align-items:center;gap:8px}
+
+/* ---------- legal pages (privacy, GDPR) ---------- */
+.legal-updated{margin-top:14px!important;font-family:var(--mono);font-size:12px!important;letter-spacing:.08em;color:#6a7748!important}
+.legal{max-width:78ch}
+.legal h3{scroll-margin-top:24px}
+.legal ul{margin:0 0 20px;padding-left:22px;color:#3d4924}
+.legal li{margin:0 0 10px;line-height:1.6}
+.legal a{color:var(--leaf-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.legal a:hover,.legal a:focus-visible{color:var(--hover)}
+.legal code{font-family:var(--mono);font-size:13px;background:#fff;border:1px solid var(--hairline);border-radius:4px;padding:1px 6px;color:var(--ink)}
+.legal-table{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:10px;background:#fff}
+.legal-table table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+.legal-table th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.14em;font-weight:600;color:var(--leaf-deep);background:var(--paper);padding:12px 14px;border-bottom:1px solid var(--hairline)}
+.legal-table td{padding:12px 14px;border-bottom:1px solid var(--hairline);vertical-align:top;color:#3d4924;line-height:1.5}
+.legal-table tr:last-child td{border-bottom:none}
+.foot-legal a{color:inherit}
+.foot-legal a:hover,.foot-legal a:focus-visible{color:#fff}
+.legal > h3:first-child{margin-top:0}
+@media(max-width:640px){
+  .legal-table{border:none;background:none;overflow:visible}
+  .legal-table table{min-width:0}
+  .legal-table thead{display:none}
+  .legal-table tr{display:block;background:#fff;border:1px solid var(--hairline);border-radius:10px;padding:6px 0;margin-bottom:12px}
+  .legal-table td{display:block;border:none;padding:6px 14px}
+  .legal-table td::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--leaf-deep);margin-bottom:2px}
+}
