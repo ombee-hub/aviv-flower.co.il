@@ -112,7 +112,7 @@ h1 em{font-style:italic;color:var(--red)}
 .ticker{
   background:var(--ink);color:var(--paper);
   overflow:hidden;white-space:nowrap;
-  font-family:var(--mono);font-size:13px;letter-spacing:.08em;
+  font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.03em;
   padding:12px 0;border-bottom:1px solid var(--ink);
 }
 .ticker-track{display:inline-block;animation:tick 30s linear infinite;will-change:transform}
