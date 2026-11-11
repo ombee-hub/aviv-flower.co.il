@@ -115,12 +115,13 @@ h1 em{font-style:italic;color:var(--red)}
   font-family:var(--mono);font-size:13px;letter-spacing:.08em;
   padding:12px 0;border-bottom:1px solid var(--ink);
 }
-.ticker-track{display:inline-block;animation:tick 40s linear infinite}
+.ticker-track{display:inline-block;animation:tick 30s linear infinite;will-change:transform}
+.ticker:hover .ticker-track{animation-play-state:paused}
 .ticker span{margin:0 28px}
 .ticker .dot{color:var(--brand)}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* the ticker keeps moving even with reduced motion on; visitors can stop it with "Pause Animations" in the accessibility panel */
 @media(prefers-reduced-motion:reduce){
-  .ticker-track{animation:none}
   *{transition:none!important}
 }
 
